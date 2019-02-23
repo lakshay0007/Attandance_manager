@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet">
+  <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+<!--  <style>
+    body.modal-open {
+    margin-right: 0 !important;
+    padding-right: 8px !important;
+        }
+</style>-->
+<style>
+ /* Style the video: 100% width and height to cover the entire window */
+  #myVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+  }
+ 
+</style>
+<script style="text/javascript" res="script.js"></script>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+
+</head>
+
+<header style="height: 50px;">
+   <!-- The video -->
+  <video autoplay muted loop id="myVideo">
+  <source src="{{ url_for('static', filename='videos/rain.mp4') }}" type="video/mp4">
+  </video>
+
+  
+<!--<nav class="navbar navbar-custom">
+  <ul class= nav navbar-nav navbar-left>
+    <a class="navbar-brand" href="/">
+    --><nav class="navbar navbar-inverse" >
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="https://sites.google.com/thapar.edu/ues012/home" target="_blank">UES012 - ENGINEERING MATERIALS</a>
+        </div>
+    <!--<ul class="nav navbar-nav navbar-right">-->
+      <li><a href="Signup.html"><span class="glyphicon glyphicon-user"></span>Sign Up</a></li>
+      <li><a href="Login.html"><span class="glyphicon glyphicon-log-in"></span>Login</a></li>
+       <!--<li class="dropdown">
+    <a class="dropdown-toggle" data-toggle="dropdown" href="#">More <span class="caret"></span></a>
+    <ul class="dropdown-menu">
+      <li><a href="#">About</a></li>
+        <li><a href="#">Contact Us</a></li></ul></li>-->
+        <!--</ul>-->
+      </div>
+    </nav>
+<!--
+  <ul class=nav navbar-nav navbar-right>
+
+    {% if session.logged_in %}
+    <a href="/logout/" style="margin-left: 560px; margin-top: 5px"><font color="white"> Logout </font>  </a>
+    
+    {% else %}
+    <a href="/login/" style="margin-left: 560px; margin-top: 5px"><span class="glyphicon glyphicon-log-in "></span><font color="black"> Login </font>  </a>
+          
+    <a href="/register/" style="margin-left: 10px ; margin-top: 5px"><span class="glyphicon glyphicon-pencil"></span><font color="white"> Sign-up </font>  </a>
+    {% endif %}
+    
+    <div class="btn-group" >
+    <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"style="margin-left: 10px" >
+    More
+    </button>
+    <div class="dropdown-menu">
+    <a class="dropdown-item" href="/support/">Support</a>
+    <a class="dropdown-item" href="/contact/">Contact</a>
+    <a class="dropdown-item" href="/about/">About</a>
+    </div>
+    </div> 
+
+    <form class="form-inline my-2 my-lg-0" >
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+
+  </ul>
+  <div style="margin-left: 500px margin-top: 300px">
+  <H5 style="color: white">Want to see a simple chatbot created using Python?</H5>
+  <a href="/interactive/">ELIZA the Psycho (logist)</a>  
+  </div>
+
+</nav>
+
+</header> 
+-->
+<body>
+
+  <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+  <script type="text/javascript" src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+  <script>
+  // Get the video
+  var video = document.getElementById("myVideo");
+
+  // Get the button
+  var btn = document.getElementById("myBtn");
+
+  // Pause and play the video, and change the button text
+  function myFunction() {
+    if (video.paused) {
+        video.play();
+        btn.innerHTML = "Pause";
+    } else {
+        video.pause();
+        btn.innerHTML = "Play";
+    }
+  }
+  </script>
+</body>
+
+</html>

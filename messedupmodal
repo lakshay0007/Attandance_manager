@@ -1,0 +1,89 @@
+<!--Mess modal starts from here,duh-->
+    
+          
+          <a role="presentation" data-toggle="modal" data-target="#exampleModal" href="#" style="margin-left: 560px"><span class="glyphicon glyphicon-log-in "></span><font color="white"> Login </font>  </a>
+
+          <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+              <h4 class="modal-title" id="exampleModalLabel" Align="center" >Login</h4>
+              </div>
+              <div class="modal-body">
+                <div class="container-fluid">
+                  <form action="" class="form-inline" method="post">
+                  <input type="text" class="form-control" placeholder="Username" name="username" value="">
+                   <input type="password" class="form-control" placeholder="Password" name="password" value="">
+                  <input class="btn btn-primary" type="submit" value="Login">
+                  </form>
+                  
+                  <div class="container">
+                  <br>
+                   <p>No account? <a href='/register'>Register here</a>.</p>
+                   <br>
+                  
+                  </div>
+              </div>
+              </div>
+
+            </div>
+            </div>
+          </div>
+
+        <a role="presentation" class="active" data-toggle="modal" data-target="#register" href="#" style="margin-left: 10px"><span class="glyphicon glyphicon-pencil"></span><font color="white"> Sign-up </font>  </a>
+        <div class="modal fade" id="register" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+            <h4 class="modal-title" id="exampleModalLabel" Align="center">Register</h4>
+            </div>
+            <div class="modal-body">
+              <div class="container">
+                
+                <form method=post action="/register">
+                  <dl>
+                  
+      <dt><label for="username">Username</label>
+      <dd><input id="username" name="username" type="text" value="">
+      
+      </dd>
+
+                  
+            <dt><label for="email">Email Address</label>
+            <dd><input id="email" name="email" type="text" value="">
+      
+          </dd>
+
+                  
+          <dt><label for="password">New Password</label>
+            <dd><input id="password" name="password" type="password" value="">
+      
+            </dd>
+
+                  
+            <dt><label for="confirm">Repeat Password</label>
+            <dd><input id="confirm" name="confirm" type="password" value="">
+      
+            </dd>
+
+                  
+          <dt><label for="accept_tos">I accept the <a href="/about/tos" target="blank">Terms of Service</a> and <a href="/about/privacy-policy" target="blank">Privacy Notice</a> (updated Aug 20, 2018)</label>
+            <dd><input id="accept_tos" name="accept_tos" type="checkbox" value="y">
+      
+              </dd>
+
+                  </dl>
+                  <p><input type=submit value=Register>
+                </form>
+                
+            </div>
+            </div>
+
+          </div>
+          </div>
+          </div>
+         
+    </ul>
+    <!--Mess modal ends here,yeah-->

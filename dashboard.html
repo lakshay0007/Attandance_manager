@@ -1,0 +1,64 @@
+{% extends "header.html" %}
+
+
+
+{% block bg_style %}
+<style>
+.content {
+    max-width: 900px;
+    margin: auto;
+    background: white;
+    padding: 10px;
+}
+</style>
+<style>
+.nav-tabs li {
+    margin-right: 9px; 
+} 
+
+.nav-pills a {
+    
+} 
+</style>
+
+{% endblock %}
+
+{% block body %}
+<div class="content">
+
+<H1> Why Python?</H1>
+
+<p>Python is a general-purpose language, which means it can be used to build just about anything, which will be made easy with the right tools/libraries.
+<br>
+Professionally, Python is great for backend web development, data analysis, artificial intelligence, and scientific computing. Many developers have also used Python to build productivity tools, games, and desktop apps, so there are plenty of resources to help you learn how to do those as well.</p>
+
+<H2>Beginner Friendly</H2>
+<p>Python was designed to be easy to understand and fun to use (its name came from Monty Python so a lot of its beginner tutorials reference it). Fun is a great motivator, and since you'll be able to build prototypes and tools quickly with Python, many find coding in Python a satisfying experience.    <br>
+	Thus, Python has gained popularity for being a beginner-friendly language, and it has replaced Java as the most popular introductory language at Top U.S. Universities.
+</p>
+
+<H2>Flexibility</H2>
+<p>Very Flexible
+
+As a dynamically typed language, Python is really flexible. This means there are no hard rules on how to build features, and you'll have more flexibility solving problems using different methods (though the Python philosophy encourages using the obvious way to solve things). Furthermore, Python is also more forgiving of errors, so you'll still be able to compile and run your program until you hit the problematic part.</p>
+
+<img src="{{ url_for('static', filename='images/pythondoes.jpg') }}" style="width:700px;height:350px;" >
+</div>
+
+<p>Was this post helpful? Tell us in the comments!<p>
+<body class="body">
+	  <div class="container-fluid">
+		{% include 'commentbox.html' %}
+	  </div>
+</body>
+<div class='abc' style="margin-top: 50px "></div>
+
+	{% for r in replies %}
+		<div class='well' style="margin-top: 2px">
+			<p>{{r}} said --</p>
+			<p>{{replies[r]}}</p> <!--  key passed to dictionary returns value at that!-->
+		</div>
+	{% endfor %}
+
+
+{% endblock %}
